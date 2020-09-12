@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
+    <!-- link to stylesheet for CloudFlare social media buttons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Work Day Scheduler</title>
+  </head>
+
+  <body>
+    <!-- _________________________________ NAVBAR __________________________________ -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
+      <div class="container">
+        <!-- LEFT SIDE -->
+        <a class="navbar-brand" href="index.html">
+          <h1>Matthew Daniels</h1>
+        </a>
+        <!-- Social Media Buttons -->
+        <a
+          href="https://www.linkedin.com/in/themattyd"
+          target="_blank"
+          class="fa fa-linkedin-in"
+        ></a>
+        <a
+          href="https://www.facebook.com/rancho.matty.d"
+          target="_blank"
+          class="fa fa-facebook"
+        ></a>
+
+        <!-- RIGHT SIDE Hidden NavBar to keep social media buttons to the left -->
+        <div class="collapse navbar-collapse" id="navbarResponsive"></div>
+      </div>
+    </nav>
+
+    <header class="jumbotron">
+      <h1 class="display-3">Work Day Scheduler</h1>
+      <p class="lead">A simple calendar app for scheduling your work day</p>
+      <p id="currentDay" class="lead"></p>
+    </header>
+    <div class="container">
+      <!-- Timeblocks go here -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+
+    <!-- ______________________________ FOOTER ________________________________ -->
+    <footer class="footer">
+      <div class="container" style="text-align: center">
+        Copyright &copy;
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Rancho Relaxo Productions
+      </div>
+    </footer>
+  </body>
+</html>
