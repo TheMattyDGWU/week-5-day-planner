@@ -35,9 +35,9 @@ $(document).ready(function () {
         .appendTo(".clear");
 
     $(".clear").on("click", function (event) {
-        event.preventDefault();
-        localStorage.clear();
-        location.reload();
+        event.preventDefault();     // don't start until everything is loaded
+        localStorage.clear();       // clear local storage
+        location.reload();          // reload the page after local storage is cleared out to give a fresh start
     });
 
     // Moment.js to get the current date and time
