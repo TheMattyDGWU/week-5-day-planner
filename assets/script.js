@@ -10,7 +10,6 @@ $(document).ready(function () {
         "3:00 pm",
         "4:00 pm",
         "5:00 pm",
-        "6:00 pm",
     ];
 
     // displays current day
@@ -114,14 +113,6 @@ $(document).ready(function () {
     } else if (now >= 17 && now < 18) {
         $("#input-8").addClass("present");
     } else if (now < 17) {
-        $("#input-8").addClass("future");
-    }
-
-    if (now > 18) {
-        $("#input-8").addClass("past");
-    } else if (now >= 18 && now < 19) {
-        $("#input-8").addClass("present");
-    } else if (now < 18) {
         $("#input-8").addClass("future");
     }
 
