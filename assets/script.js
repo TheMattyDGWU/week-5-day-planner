@@ -10,6 +10,7 @@ $(document).ready(function () {
         "3:00 pm",
         "4:00 pm",
         "5:00 pm",
+        "6:00 pm",
     ];
 
     // displays current day
@@ -43,7 +44,7 @@ $(document).ready(function () {
     // Moment.js to get the current date and time
     let now = new Date().getHours();
 
-    // Determine if each row is past, present, or future (24 hour time-slots).... Need to create a better way
+    // Determine if each row is past, present, or future (24 hour time-slots).... Need to create a better way!
     if (now > 9) {
         $("#input-0").addClass("past");
     } else if (now >= 9 && now < 10) {
@@ -116,16 +117,24 @@ $(document).ready(function () {
         $("#input-8").addClass("future");
     }
 
+    if (now > 18) {
+        $("#input-8").addClass("past");
+    } else if (now >= 18 && now < 19) {
+        $("#input-8").addClass("present");
+    } else if (now < 18) {
+        $("#input-8").addClass("future");
+    }
+
     // Input user data, post to local storage, and save in correct time-slot
     // 9am
 
     let row9amInput = document.querySelector("#input-0");
     let row9amSaveBtn = document.querySelector("#hour0");
 
-    // Display previous user input
+    // Display previous input
     row9amInput.value = localStorage.getItem("stored0");
 
-    // Save button clicks and stores the user input data
+    // Save button clicks and stores the new user input data
     hour0.addEventListener("click", updateOutput1);
 
     // Save user input to Local Storage
